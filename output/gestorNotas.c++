@@ -2,14 +2,14 @@
 #include <vector>
 #include <string>
 #include <fstream>
- std::vector<std::string> notas={};
+ std::vector<std::string> notas={};   // de esta manera creamos arreglos de tipo string 
 
 void Agregarnotas(){
 std::cout<<"Humano quieres agregar una nota ? "<<std::endl;
 std::string notaaa;
 std::cin.ignore(); // Ignorar el salto de línea anterior
-    std::getline(std::cin, notaaa); // Capturar la línea completa
-    notas.push_back(notaaa + ".doc"); // Agregar la nota al vector
+    std::getline(std::cin, notaaa); // Capturar la línea completa scontando espacios 
+    notas.push_back(notaaa + ".doc"); // Agregar la nota al vector + la extencion doc
     std::cout << "Nota agregada: " << notaaa << ".doc" << std::endl;
 notas.push_back(notaaa+ ".doc");
  };
@@ -36,6 +36,7 @@ void menu(){
     {
     std::cout<<"no hay nada que eliminar ,ya que tu arreglo ta vacio  "<<std::endl;
     }else{
+      
     
     std::cout<<"esta es la cantidad de elementos , va del 0 al "<<longitud<<std::endl;
     std::cout<<"escribe el numero que represente a una nota que quieras eliminar ,ejemplo ,1,2,3,etc:  "<<std::endl;
